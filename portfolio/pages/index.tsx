@@ -8,7 +8,7 @@ export const index = () => {
   return (
     <div className='flex flex-col flex-grow px-6 pt-1'>
         <h5 className='my-3 font-medium'>
-          Currently pursuing a M.Sc Computerscience & engineering degree at Umeå University.
+          Currently pursuing a M.Sc Computer Science & engineering degree at Umeå University.
           Writing my dissertation on the subject of Node Embedding Algorithms for Product Recommendation systems.
         </h5>
         <div 

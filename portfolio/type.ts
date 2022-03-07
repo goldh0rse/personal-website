@@ -4,3 +4,9 @@ export interface IService {
     title:string,
     about:string
 }
+
+export interface ISkill {
+    Icon: IconType,
+    name:string,
+    level:string
+}
