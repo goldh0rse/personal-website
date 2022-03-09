@@ -7,18 +7,20 @@ export const index = () => {
 
   return (
     <div className='flex flex-col flex-grow px-6 pt-1'>
-        <h5 className='my-3 font-medium'>
+        <h5 className='my-3 font-medium dark:text-white'>
           Currently pursuing a M.Sc Computer Science & engineering degree at Umeå University.
           Writing my dissertation on the subject of Node Embedding Algorithms for Product Recommendation systems.
         </h5>
         <div 
-          className='flex-grow p-4 mt-5 bg-gray-400' 
+          className='flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100' 
           style={{marginLeft:'-1.5em', marginRight:'-1.5em'}}
         >
-          <h6 className='my-3 font-bold tracking-wide text-x1'>What I offer</h6>
-          <div className='grid gap-6 lg:grid-cols-2'>
+          <h6 className='my-3 font-bold tracking-wide text-x1 dark:text-white'>
+            What I offer
+          </h6>
+          <div className='grid gap-6 lg:grid-cols-2 dark:bg-dark-200'>
             {services.map(service=> (
-              <div className='bg-gray-200 rounded-lg lg:col-span-1'>
+              <div className='bg-gray-200 rounded-lg lg:col-span-1 dark:bg-gray-200'>
                 <ServiceCard service={service} />              
               </div>
             ))}

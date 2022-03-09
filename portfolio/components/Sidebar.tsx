@@ -1,21 +1,28 @@
 import {AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 import {GoLocation} from 'react-icons/go'
 import {GiTie} from 'react-icons/gi'
-
+import {useTheme} from 'next-themes'
 
 const Sidebar = () => {
-  return (
+    const {theme, setTheme} = useTheme();
+
+    const changeTheme = ()=> {
+        // Add support for changing the icon (remove toggle text)
+        setTheme(theme==="light"?"dark":"light")
+    };
+    
+    return (
     <div>
         <img 
             src="https://media-exp1.licdn.com/dms/image/C5603AQF-xs_p9tAV9A/profile-displayphoto-shrink_200_200/0/1617970692364?e=1651708800&v=beta&t=o4FiquzebOG7kr9GyjXKLP3YR9WB1NgzdCz74WBQCSA" 
             alt="user avatar"
             className='w-32 h-32 mx-auto rounded-full' 
         />
-        <h3 className='my-4 text-3xl font-medium tracking-wider font-fredoka'>
+        <h3 className='my-4 text-3xl font-medium tracking-wider font-fredoka dark:text-white'>
             <span>Klas </span>   
             Holmberg
         </h3>
-        <p className='px-2 py-1 my-3 bg-gray-300 rounded-full'>
+        <p className='px-2 py-1 my-3 bg-gray-300 rounded-full dark:bg-black-500'>
             Software Developer
         </p>
         <a 
@@ -54,7 +61,9 @@ const Sidebar = () => {
         >
             Email Me
         </button>
-        <button className='w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-600'>Toggle Theme</button>
+        <button className='w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-600' onClick={()=>changeTheme()}>
+            Toggle Theme
+        </button>
     </div>
   )
 }
